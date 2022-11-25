@@ -1,0 +1,203 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>HerreraTapoii</title>
+    <script src="http://code.jquery.com/jquery-latest.js"></script>
+    <link rel="stylesheet" href="style2.css">
+    <style>
+        .slide {
+            position: relative;
+            box-shadow: 0px 1px 6px rgba(0, 0, 0, 0.64);
+            margin-top: 26px;
+        }
+        
+        .slide-inner {
+            position: relative;
+            overflow: hidden;
+            width: 100%;
+            /*lo del parentesis es para cambiar el recuadro del carrusel*/
+            height: calc( 300px + 3em);
+        }
+        
+        .slide-open:checked+.slide-item {
+            position: static;
+            opacity: 100;
+        }
+        
+        .slide-item {
+            position: absolute;
+            opacity: 0;
+            -webkit-transition: opacity 0.6s ease-out;
+            transition: opacity 0.6s ease-out;
+        }
+        
+        .slide-item img {
+            display: block;
+            /* height para cambiar la altura de la imagen de las imagenes del carrusel*/
+            height: 600px;
+            max-width: 100%;
+        }
+        
+        .slide-control {
+            /*cambia algunas cosas de las bolitas con las flechas*/
+            background: rgba(0, 0, 0, 0.28);
+            border-radius: 50%;
+            color: #fff;
+            cursor: pointer;
+            display: none;
+            font-size: 40px;
+            height: 40px;
+            line-height: 35px;
+            position: absolute;
+            top: 50%;
+            -webkit-transform: translate(0, -50%);
+            cursor: pointer;
+            -ms-transform: translate(0, -50%);
+            transform: translate(0, -50%);
+            text-align: center;
+            width: 40px;
+            z-index: 10;
+        }
+        
+        .slide-control.prev {
+            left: 2%;
+        }
+        
+        .slide-control.next {
+            right: 2%;
+        }
+        
+        .slide-control:hover {
+            background: rgba(0, 0, 0, 0.8);
+            color: #aaaaaa;
+        }
+        
+        #slide-1:checked~.control-1,
+        #slide-2:checked~.control-2,
+        #slide-3:checked~.control-3 {
+            display: block;
+        }
+        
+        .slide-indicador {
+            list-style: none;
+            margin: 0;
+            padding: 0;
+            position: absolute;
+            bottom: 2%;
+            left: 0;
+            right: 0;
+            text-align: center;
+            z-index: 10;
+        }
+        
+        .slide-indicador li {
+            display: inline-block;
+            margin: 0 5px;
+        }
+        
+        .slide-circulo {
+            color: #828282;
+            cursor: pointer;
+            display: block;
+            font-size: 35px;
+        }
+        
+        .slide-circulo:hover {
+            color: #aaaaaa;
+        }
+        
+        #slide-1:checked~.control-1~.slide-indicador li:nth-child(1) .slide-circulo,
+        #slide-2:checked~.control-2~.slide-indicador li:nth-child(2) .slide-circulo,
+        #slide-3:checked~.control-3~.slide-indicador li:nth-child(3) .slide-circulo {
+            color: #428bca;
+        }
+        
+        #titulo {
+            width: 100%;
+            position: absolute;
+            padding: 0px;
+            margin: 0px auto;
+            text-align: center;
+            font-size: 27px;
+            color: rgba(255, 255, 255, 1);
+            font-family: 'Open Sans', sans-serif;
+            z-index: 9999;
+            text-shadow: 0px 1px 2px rgba(0, 0, 0, 0.33), -1px 0px 2px rgba(255, 255, 255, 0);
+        }
+        
+        .PA {
+            height: 40%;
+            width: 100%;
+        }
+        
+        .eco {
+            background-color: #828282;
+            background-position: 25% 75%;
+        }
+    </style>
+</head>
+
+<body>
+    <header>
+        <img src="Logo1.png" width="8%">
+        <div class="wrapper">
+            <div class="logo">HerreraTapoii</div>
+
+            <nav>
+                <a class="home" href=" # ">Home</a>
+                <a class="about" href="# ">About us</a>
+                <a class="places" href="# ">Places</a>
+                <a class="contact" href="# ">Contact us</a>
+            </nav>
+        </div>
+    </header>
+    <h2 class="la ">A new experience of discovering Cocle</h2>
+    <div class="slide ">
+        <div class="slide-inner ">
+            <input class="slide-open " type="radio " id="slide-1 " name="slide " aria-hidden="true " hidden=" " checked="checked ">
+            <div class="slide-item ">
+                <img src="https://encolombia.com/wp-content/uploads/2021/12/Paisaje-Natural.jpg ">
+            </div>
+            <input class="slide-open " type="radio " id="slide-2 " name="slide " aria-hidden="true " hidden=" ">
+            <div class="slide-item ">
+                <img src="https://maravillasdelatierrablog.files.wordpress.com/2016/04/paisaje-natural-11.jpg?w=1000 ">
+            </div>
+            <input class="slide-open " type="radio " id="slide-3 " name="slide " aria-hidden="true " hidden=" ">
+            <div class="slide-item ">
+                <img src="http://definicionde.hugex.net/wp-content/uploads/2015/07/e1001e86903d5fccba2a7e83a0547bd4.jpg ">
+            </div>
+            <label for="slide-3 " class="slide-control prev control-1 "></label>
+            <label for="slide-2 " class="slide-control next control-1 ">›</label>
+            <label for="slide-1 " class="slide-control prev control-2 ">‹</label>
+            <label for="slide-3 " class="slide-control next control-2 ">›</label>
+            <label for="slide-2 " class="slide-control prev control-3 ">‹</label>
+            <label for="slide-1 " class="slide-control next control-3 ">›</label>
+            <ol class="slide-indicador ">
+                <li>
+                    <label for="slide-1 " class="slide-circulo ">•</label>
+                </li>
+                <li>
+                    <label for="slide-2 " class="slide-circulo ">•</label>
+                </li>
+                <li>
+                    <label for="slide-3 " class="slide-circulo ">•</label>
+                </li>
+            </ol>
+        </div>
+    </div>
+    <br>
+    <br>
+    <div class="PA">
+        <img src="https://cdn.tiqy.com/img/t/anton-valley-tour-discover-panama-365-panama-1089.jpg?width=850&height=460&fixedwidthheight=true">
+    </div>
+    <div class="eco">
+        <h1>¿What is ecotourism?</h1>
+        <p>Ecotourism or nature tourism is an approach to tourism activities in which observation of the natural environment is offered. It is an alternative style of tourism, or ecotourism, different from traditional or mass tourism.</p>
+    </div>
+
+
+</body>
+
+</html>
