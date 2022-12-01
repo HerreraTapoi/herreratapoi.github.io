@@ -1,0 +1,62 @@
+.contenedor {
+    position: relative;
+    display: inline-block;
+    text-align: center;
+    width: 100%;
+}
+
+.texto-encima1 {
+    position: absolute;
+    top: 350px;
+    left: 250px;
+    color: white;
+    font-size: 1.5cm;
+    background-color: rgba(0, 0, 0, 0.6);
+}
+
+.centrado {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+}
+
+.text {
+    color: rgb(39, 36, 36);
+    font-size: 25px;
+    padding: 70px;
+    font-weight: 700;
+    text-align: justify;
+}
+
+.texto-encima2 {
+    position: absolute;
+    top: 380px;
+    left: 390px;
+    color: white;
+    font-size: 1.5cm;
+    background-color: rgba(0, 0, 0, 0.6);
+}
+
+.texto-encima3 {
+    position: absolute;
+    top: 430px;
+    left: 400px;
+    color: white;
+    font-size: 1.5cm;
+    background-color: rgba(0, 0, 0, 0.6);
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
