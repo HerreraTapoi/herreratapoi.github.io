@@ -1,0 +1,100 @@
+.parrafo {
+    z-index: 1;
+    width: 900px;
+    padding: 20px 20px;
+    font-size: 15px;
+    line-height: 1.5;
+    background: rgb(248, 247, 247);
+    box-shadow: 1px 5px 25px rgba(0, 0, 0, 0.45);
+    border-radius: 5px;
+    margin-left: 15%;
+    text-align: center;
+}
+
+.parrafo img {
+    width: 300px;
+    border-radius: 5px;
+    float: center;
+    margin-left: 10px;
+}
+
+.tittle {
+    text-align: center;
+    font-size: 40px;
+    margin-top: 100px;
+    font-weight: 100;
+    color: white;
+}
+
+html,
+body {
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    width: 100%;
+    height: 100%;
+    letter-spacing: 0.3em;
+    line-height: 1.6;
+}
+
+.eco {
+    font-size: 1cm;
+    
+}
+
+.p2 {
+    text-align: center;
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: 0.5cm;
+}
+
+.container {
+    width: 100%;
+    max-width: 1200px;
+    height: 430px;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    margin: auto;
+}
+
+.container .card {
+    width: 330px;
+    height: 570px;
+    border-radius: 8px;
+    box-shadow: 0 2px 2px rgba(0, 0, 0, 0.2);
+    overflow: hidden;
+    margin: 20px;
+    transition: all 0.25s;
+    background-color: rgb(245, 250, 250);
+    text-align: center;
+    font-family: Arial, Helvetica, sans-serif;
+}
+
+.container .card:hover {
+    transform: translateY(-15px);
+    box-shadow: 0 12px 16px rgba(0, 0, 0, 0.2);
+}
+
+.container .card img {
+    width: 330px;
+    height: 220px;
+}
+
+.container .card h4 {
+    font-weight: 600;
+}
+
+.container .card p {
+    padding: 0 1rem;
+    font-size: 16px;
+    font-weight: 300;
+}
+
+.container .card a {
+    font-weight: 500;
+    text-decoration: none;
+    color: blue;
+}
